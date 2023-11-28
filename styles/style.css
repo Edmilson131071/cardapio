@@ -39,9 +39,16 @@ header ul {
   width: 100%;
 }
 
+#check, #hamburger{
+  display:none;
+}
 @media (max-width: 700px) {
   h1 {
     color: red;
+  }
+
+  #hamburger{
+    display: block;
   }
 
   .itens-cardapio {
@@ -57,11 +64,12 @@ header ul {
     align-items: center;
     font-size: large;
   }
-}
-#menu {
-  display: none;
+  #menu {
+    display: none;
+  }
+  #check:checked ~ #menu {
+    display: block;
+  }
 }
 
-#check:checked ~ #menu {
-  display: block;
-}
+
